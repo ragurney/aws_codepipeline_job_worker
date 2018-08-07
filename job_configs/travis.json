@@ -1,0 +1,55 @@
+{
+  "category": "Test",
+  "provider": "Travis",
+  "version": "1",
+  "settings": {
+    "entityUrlTemplate": "https://travis-ci.org/{Config:Owner}/{Config:ProjectName}/",
+    "executionUrlTemplate": "https://travis-ci.org/{Config:Owner}/{Config:ProjectName}/builds/{ExternalExecutionId}"
+  },
+  "configurationProperties": [
+    {
+      "name": "Owner",
+      "required": true,
+      "key": false,
+      "secret": false,
+      "queryable": false,
+      "description": "The owner of the repository.",
+      "type": "String"
+    },
+    {
+      "name": "ProjectName",
+      "required": true,
+      "key": false,
+      "secret": false,
+      "queryable": false,
+      "description": "The name of the repository.",
+      "type": "String"
+    },
+    {
+      "name": "Branch",
+      "required": true,
+      "key": false,
+      "secret": false,
+      "queryable": false,
+      "description": "The branch under test.",
+      "type": "String"
+    },
+    {
+      "name": "APIToken",
+      "required": true,
+      "key": false,
+      "secret": true,
+      "queryable": false,
+      "description": "The API Token for Travis.",
+      "type": "String"
+    }
+  ],
+  "inputArtifactDetails": {
+    "maximumCount": 1,
+    "minimumCount": 1
+  },
+  "outputArtifactDetails": {
+    "maximumCount": 0,
+    "minimumCount": 0
+  }
+}
