@@ -152,7 +152,7 @@ func (j *Job) getBuildStatus(requestID string) (b build, err error) {
 	if len(res.Builds) > 0 {
 		return res.Builds[0], nil // Only expect one build for branch
 	}
-	return build{}, errors.New("no builds found") // TODO: maybe shouldn't be an error
+	return build{}, errors.New("no builds found")
 }
 
 func (j *Job) pollForResult(requestID string, f pollBuildEndCondition) (build, error) {
