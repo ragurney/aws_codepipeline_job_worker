@@ -1,5 +1,5 @@
 
-# AWS CodePipeline Job Worker
+# AWS CodePipeline Job Worker <img src="https://cdn4.iconfinder.com/data/icons/under-construction-1/512/under-512.png" height="50px">
 
 A simple job worker for custom actions in AWS CodePipeline. Built to be easily extended to accomodate other custom
 jobs not already implemented.
@@ -42,7 +42,8 @@ status to AWS CodePipelin (see `pkg/actions/travis/dispatcher` and `pkg/actions/
 1. `job` will do all of the interaction with the third party service, such as submitting a build, polling for progress, updating CodePipeline with intermediate statuses/info such as an `ExecutionID`
 1. Once the job is complete `job` will update CodePipeline a final time with the result status.
 
-<img src="https://cdn4.iconfinder.com/data/icons/under-construction-1/512/under-512.png" height="100px">
+
+### TODO
 
 * Tons of refactoring, mainly in `job.rb`
   * Address TODOs
